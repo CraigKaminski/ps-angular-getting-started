@@ -8,6 +8,7 @@ import { IProduct } from './product';
 })
 export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
+  rating: number;
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
@@ -73,5 +74,9 @@ export class ProductListComponent implements OnInit {
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1
     );
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
   }
 }
