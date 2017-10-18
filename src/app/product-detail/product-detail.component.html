@@ -1,0 +1,11 @@
+<div class="card" *ngIf="product">
+  <div class="card-header text-white bg-primary">
+    {{pageTitle + ': ' + product.productName}}
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-primary" (click)="onBack()">
+      <span class="fa fa-chevron-left"></span>
+      Back
+    </button>
+  </div>
+</div>
