@@ -7,11 +7,11 @@ import { ProductService} from './product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  pageTitle: string = 'Product List';
+  pageTitle = 'Product List';
   rating: number;
-  imageWidth: number = 50;
-  imageMargin: number = 2;
-  showImage: boolean = false;
+  imageWidth = 50;
+  imageMargin = 2;
+  showImage = false;
   _listFilter: string;
   filteredProducts: IProduct[];
   errorMessage: string;
